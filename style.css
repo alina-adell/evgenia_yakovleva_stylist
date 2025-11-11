@@ -20,6 +20,10 @@
         padding: 15px;
     }
 
+    body.no-scroll {
+        overflow: hidden;
+    }
+
     .container {
         max-width: 1170px;
         margin: 0 auto;
@@ -966,6 +970,27 @@
     }
 
     @media (max-width: 425px) {
+        .nav-bar {
+            display: none;
+        }
+
+        .burger-menu {
+            display: block;
+        }
+
+        .mobile-menu {
+            display: block;
+        }
+
+        .container.header_container {
+            padding: 0;
+            justify-content: space-between;
+        }
+
+        .header__phone {
+            display: none;
+        }
+
         .main__text {
             font-size: 16px;
         }
