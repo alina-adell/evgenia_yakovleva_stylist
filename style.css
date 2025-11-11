@@ -7,6 +7,10 @@
         box-sizing: border-box;
     }
 
+    html {
+        scroll-behavior: smooth;
+    }
+
     body {
         margin: 0;
         font-family: "Oswald", sans-serif;
@@ -922,6 +926,46 @@
     }
 
     @media (max-width: 320px) {
+        .main__text {
+            font-size: 16px;
+        }
+
+        .work__img {
+            width: calc(100vw - 20px);
+            height: auto;
+        }
+
+        .work__carousel {
+            padding: 0 10px;
+        }
+
+        .work__images {
+            gap: 10px;
+        }
+
+        .price__info {
+            grid-template-columns: 1fr;
+        }
+
+        .list__price {
+            text-align: left;
+        }
+
+        .price__item {
+            padding: 12px 15px;
+        }
+
+        .list__price_info {
+            font-size: 14px;
+        }
+
+        .list__price {
+            font-size: 14px;
+            text-align: left;
+        }
+    }
+
+    @media (max-width: 425px) {
         .main__text {
             font-size: 16px;
         }
