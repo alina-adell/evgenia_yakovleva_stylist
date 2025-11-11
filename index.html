@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Парикмахер Евгения Яковлева</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header_container">
+        <div class="header__logo">
+          <img src="images/logo.jpeg" alt="Логотип Евгения Яковлева" />
+        </div>
+
+        <div class="burger-menu">
+          <button class="burger-btn" aria-label="Открыть меню">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+          </button>
+        </div>
+
+        <div class="nav-bar">
+          <a href="#about">About Me</a>
+          <span class="divider">|</span>
+          <a href="#price">Price</a>
+          <span class="divider">|</span>
+          <a href="#works">My Works</a>
+          <span class="divider">|</span>
+          <a href="#contacts">Contacts</a>
+          <span class="divider">|</span>
+        </div>
+
+        <!-- Мобильное меню -->
+        <div class="mobile-menu">
+          <nav class="mobile-menu__nav">
+            <a href="#about" class="mobile-menu__link">About Me</a>
+            <a href="#contacts" class="mobile-menu__link">Contacts</a>
+            <a href="#works" class="mobile-menu__link">My Works</a>
+            <a href="#price" class="mobile-menu__link">Price</a>
+            <a href="#faq" class="mobile-menu__link">Faq</a>
+          </nav>
+        </div>
+        <div class="header__phone">
+          <a href="tel:+79999218065" class="header__phone-link">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              viewBox="0 0 32 32"
+              fill="none"
+            >
+              <title>phone-call</title>
+              <path
+                d="M18.037 6.635c-0.011-0.001-0.023-0.001-0.035-0.001-0.414 0-0.75 0.336-0.75 0.75 0 0.399 0.312 0.726 0.706 0.749l0.002 0c3.533 0.231 6.311 3.153 6.311 6.723 0 0.186-0.008 0.37-0.022 0.552l0.002-0.024c0 0.414 0.336 0.75 0.75 0.75s0.75-0.336 0.75-0.75v0c0.009-0.143 0.014-0.31 0.014-0.479 0-4.38-3.397-7.967-7.7-8.269l-0.026-0.001zM17.963 2.749c0.449 0.022 10.998 0.688 10.998 12.635 0 0.414 0.336 0.75 0.75 0.75s0.75-0.336 0.75-0.75v0c0.015-0.238 0.024-0.515 0.024-0.795 0-7.059-5.471-12.841-12.405-13.335l-0.043-0.002c-0.009-0-0.019-0.001-0.029-0.001-0.403 0-0.732 0.314-0.757 0.71l-0 0.002c-0.001 0.011-0.001 0.024-0.001 0.037 0 0.401 0.315 0.729 0.711 0.749l0.002 0zM30.637 23.15c-0.109-0.675-0.334-1.281-0.654-1.823l0.013 0.024c-0.114-0.186-0.301-0.317-0.521-0.353l-0.004-0.001-8.969-1.424c-0.035-0.006-0.076-0.009-0.117-0.009-0.207 0-0.395 0.083-0.531 0.218l-0-0c-0.676 0.68-1.194 1.516-1.496 2.451l-0.012 0.044c-4.016-1.64-7.141-4.765-8.742-8.675l-0.038-0.105c0.978-0.314 1.814-0.833 2.493-1.509l-0 0c0.136-0.136 0.22-0.324 0.22-0.531 0-0.041-0.003-0.081-0.010-0.12l0.001 0.004-1.425-8.969c-0.036-0.224-0.167-0.412-0.35-0.524l-0.003-0.002c-0.505-0.301-1.094-0.522-1.724-0.626l-0.029-0.004c-0.315-0.070-0.677-0.111-1.048-0.111-0.025 0-0.050 0-0.075 0.001l0.004-0h-0.006c-3.497 0.024-6.326 2.855-6.347 6.351v0.002c0.015 12.761 10.355 23.102 23.115 23.117h0.002c3.5-0.023 6.331-2.854 6.354-6.351v-0.002c0-0.020 0-0.044 0-0.068 0-0.356-0.036-0.703-0.106-1.038l0.006 0.033zM24.383 29.076c-11.933-0.014-21.602-9.684-21.616-21.616v-0.001c0.019-2.673 2.182-4.835 4.854-4.853h0.002c0.016-0 0.036-0 0.055-0 0.272 0 0.537 0.030 0.793 0.086l-0.024-0.005c0.366 0.060 0.695 0.161 1.003 0.3l-0.025-0.010 1.302 8.202c-0.628 0.528-1.404 0.901-2.257 1.050l-0.029 0.004c-0.355 0.064-0.62 0.37-0.62 0.739 0 0.088 0.015 0.172 0.043 0.25l-0.002-0.005c1.772 5.072 5.695 8.994 10.646 10.729l0.121 0.037c0.073 0.026 0.157 0.041 0.245 0.041 0.368 0 0.674-0.265 0.737-0.615l0.001-0.005c0.153-0.882 0.526-1.658 1.061-2.295l-0.006 0.007 8.201 1.303c0.133 0.294 0.237 0.636 0.296 0.994l0.003 0.024c0.046 0.219 0.073 0.471 0.073 0.729 0 0.018-0 0.035-0 0.053l0-0.003c-0.016 2.675-2.179 4.84-4.852 4.859h-0.002z"
+                fill="#d1aaff"
+              />
+            </svg>
+          </a>
+          <span class="phone">+7 999 921-80-65</span>
+        </div>
+      </div>
+    </header>
+    <section class="main">
+      <div class="container main">
+        <div class="main__info">
+          <div class="main__title">Евгения Яковлева</div>
+          <div class="main__text">парикмахер-стилист</div>
+          <div class="main__action">
+            <button
+              class="btn main__btn"
+              onclick="window.open('https://dikidi.net/931048', '_blank')"
+            >
+              Онлайн запись
+            </button>
+          </div>
+        </div>
+
+        <div class="main__image">
+          <img src="/images/main.png" alt="Evgenia" class="main__photo-img" />
+        </div>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="about__container">
+        <h2 class="section-title section-title--about">About Me</h2>
+        <div class="about__subtitle">
+          Парикмахер-стилист, колорист с более чем 15-летним опытом работы
+        </div>
+        <div class="about__content">
+          <div class="about__text about__text--left">
+            Здравствуй, искатель того самого « своего парикмахера» Меня зовут
+            Евгения Яковлева, я
+            <span class="about__highlight">парикмахер-колорист</span> из
+            Москвы.<br /><br />
+            Я не просто работаю с волосами, я
+            <span class="about__highlight"
+              >создаю стиль, который подчеркнёт вашу индивидуальность</span
+            >.
+          </div>
+          <div class="about__photo-wrap">
+            <img
+              src="images/about3.png"
+              alt="Евгения Яковлева"
+              class="about__photo"
+            />
+          </div>
+          <div class="about__text about__text--right">
+            Моя философия проста: я
+            <span class="about__highlight"
+              >работаю на себя и для своего клиента</span
+            >. Мои навыки — это результат
+            <span class="about__highlight"
+              >постоянного обучения и многолетнего опыта</span
+            >.<br /><br />
+            Доверьте мне свои волосы, и я сделаю их
+            <span class="about__highlight">совершенными</span>.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="work">
+      <div class="work__container">
+        <div class="work__frame">
+          <h2 class="section-title section-title--work">My Works</h2>
+          <div class="work__slider">
+            <div class="work__slide">
+              <img
+                src="images/1.JPG"
+                alt="Fashion"
+                class="work__img"
+                decoding="async"
+                width="400"
+                height="300"
+              />
+            </div>
+            <div class="work__slide">
+              <img
+                src="images/6.JPG"
+                alt="Beauty"
+                class="work__img"
+                loading="lazy"
+                width="800"
+                height="600"
+              />
+            </div>
+            <div class="work__slide">
+              <img
+                src="images/5.JPG"
+                alt="Beauty"
+                class="work__img"
+                loading="lazy"
+                width="800"
+                height="600"
+              />
+            </div>
+            <div class="work__slide">
+              <img
+                src="images/3.jpg"
+                alt="Wedding"
+                class="work__img"
+                decoding="async"
+                width="400"
+                height="300"
+              />
+            </div>
+            <div class="work__slide">
+              <img
+                src="images/2.JPG"
+                alt="Beauty"
+                class="work__img"
+                loading="lazy"
+                width="800"
+                height="600"
+              />
+            </div>
+            <div class="work__slide">
+              <img
+                src="images/4.JPG"
+                alt="Beauty"
+                class="work__img"
+                loading="lazy"
+                width="800"
+                height="600"
+              />
+            </div>
+            <div class="work__slide">
+              <img
+                src="images/7.JPG"
+                alt="Beauty"
+                class="work__img"
+                loading="lazy"
+                width="800"
+                height="600"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="price">
+      <div class="container">
+        <div class="design">
+          <h2 class="section-title section-title--price">
+            Прайс на наши услуги
+          </h2>
+          <div class="price__info_all">
+            <div class="price__item">
+              <div class="list__price_info">Кератиновое выпрямление волос</div>
+              <div class="list__price">от 10 000 ₽</div>
+            </div>
+            <div class="price__item">
+              <div class="list__price_info">Коллаген длинные волосы</div>
+              <div class="list__price">8 000 ₽</div>
+            </div>
+            <div class="price__item">
+              <div class="list__price_info">Коллаген средняя длинна волос</div>
+              <div class="list__price">7 000 ₽</div>
+            </div>
+            <div class="price__item">
+              <div class="list__price_info">Наращивание волос</div>
+              <div class="list__price">от 7 000 ₽</div>
+            </div>
+            <div class="price__item">
+              <div class="list__price_info">Бразильское окрашивание</div>
+              <div class="list__price">от 11 000 ₽</div>
+            </div>
+            <div class="price__item">
+              <div class="list__price_info">Окрашивание Airtech</div>
+              <div class="list__price">12 000 ₽</div>
+            </div>
+            <div class="price__item">
+              <div class="list__price_info">
+                Окрашивание длинные волосы (стоимость без учёта укладки)
+              </div>
+              <div class="list__price">от 4 600 ₽</div>
+            </div>
+            <div class="price__item">
+              <div class="list__price_info">
+                Окрашивание корней (стоимость без учёта укладки)
+              </div>
+              <div class="list__price">от 3 700 ₽</div>
+            </div>
+            <div class="price__item">
+              <div class="list__price_info">
+                Окрашивание короткие волосы (без учёта сушки волос)
+              </div>
+              <div class="list__price">от 4 000 ₽</div>
+            </div>
+            <div class="price__item">
+              <div class="list__price_info">
+                Окрашивание средняя длина (стоимость без учёта укладки)
+              </div>
+              <div class="list__price">от 4 300 ₽</div>
+            </div>
+            <div class="price__item">
+              <div class="list__price_info">Сложное окрашивание</div>
+              <div class="list__price">от 10 000 ₽</div>
+            </div>
+            <div class="price__item">
+              <div class="list__price_info">
+                Тонирование (цена без учёта сушки)
+              </div>
+              <div class="list__price">от 3 600 ₽</div>
+            </div>
+            <div class="price__item">
+              <div class="list__price_info">Женская стрижка длинные волосы</div>
+              <div class="list__price">от 3 600 ₽</div>
+            </div>
+            <div class="price__item">
+              <div class="list__price_info">
+                Женская стрижка короткие волосы
+              </div>
+              <div class="list__price">2 500 ₽</div>
+            </div>
+            <div class="price__item">
+              <div class="list__price_info">Женская стрижка средняя длина</div>
+              <div class="list__price">от 3 100 ₽</div>
+            </div>
+            <div class="price__item">
+              <div class="list__price_info">
+                Коррекция длинны (до 2 см, одним срезом)
+              </div>
+              <div class="list__price">2 000 ₽</div>
+            </div>
+            <div class="price__item">
+              <div class="list__price_info">Стрижка мужская</div>
+              <div class="list__price">2 000 ₽</div>
+            </div>
+            <div class="price__item">
+              <div class="list__price_info">Стрижка чёлки</div>
+              <div class="list__price">600 ₽</div>
+            </div>
+            <div class="price__item">
+              <div class="list__price_info">
+                Укладка волос средняя длинна (фен)
+              </div>
+              <div class="list__price">от 3 000 ₽</div>
+            </div>
+            <div class="price__item">
+              <div class="list__price_info">Укладка длинные волосы (фен)</div>
+              <div class="list__price">от 3 700 ₽</div>
+            </div>
+            <div class="price__item">
+              <div class="list__price_info">Укладка коротких волос (фен)</div>
+              <div class="list__price">от 2 300 ₽</div>
+            </div>
+            <div class="price__item">
+              <div class="list__price_info">Коллаген средняя длина + маска</div>
+              <div class="list__price">8 000 ₽</div>
+            </div>
+            <div class="price__item">
+              <div class="list__price_info">Маска + укладка</div>
+              <div class="list__price">от 3 000 ₽</div>
+            </div>
+            <div class="price__item">
+              <div class="list__price_info">
+                Пилинг кожи головы (стоимость без учета сушки волос)
+              </div>
+              <div class="list__price">от 1 300 ₽</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="reviews">
+      <div class="container">
+        <div class="reviews-header">
+          <h2 class="section-title section-title--reviews">
+            What our clients say ...
+          </h2>
+        </div>
+
+        <div class="reviews-slider">
+          <div class="review-card">
+            <img
+              src="feedback/feedback1.jpg"
+              alt="Отзыв клиента 1"
+              class="client-image"
+            />
+          </div>
+          <div class="review-card">
+            <img
+              src="feedback/feedback2.jpg"
+              alt="Отзыв клиента 2"
+              class="client-image"
+            />
+          </div>
+          <div class="review-card">
+            <img
+              src="feedback/feedback3.jpg"
+              alt="Отзыв клиента 3"
+              class="client-image"
+            />
+          </div>
+          <div class="review-card">
+            <img
+              src="feedback/feedback4.jpg"
+              alt="Отзыв клиента 4"
+              class="client-image"
+            />
+          </div>
+          <div class="review-card">
+            <img
+              src="feedback/feedback5.jpg"
+              alt="Отзыв клиента 5"
+              class="client-image"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contacts" id="contacts">
+      <div class="container">
+        <div class="contacts-header">
+          <h2 class="section-title section-title--contacts">Contacts</h2>
+        </div>
+        <div class="contacts__content">
+          <div class="contacts__text">
+            Свяжитесь со мной для записи или получения консультации
+          </div>
+          <div class="contacts__social">
+            <a
+              href="https://vk.com/zena1991"
+              target="_blank"
+              class="contacts__link contacts__link--vk"
+            >
+              <div class="contacts__icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 50 50"
+                  width="24"
+                  height="24"
+                >
+                  <path
+                    d="M25,2C12.318,2,2,12.318,2,25s10.318,23,23,23c12.683,0,23-10.318,23-23S37.683,2,25,2z M34.973,29.535 c2.237,1.986,2.702,2.695,2.778,2.816C38.678,33.821,36.723,34,36.723,34h-4.12c0,0-1.003,0.011-1.86-0.557 c-1.397-0.915-2.86-2.689-3.888-2.381C25.992,31.32,26,32.486,26,33.483C26,33.84,25.693,34,25,34s-0.981,0-1.288,0 c-2.257,0-4.706-0.76-7.149-3.313c-3.456-3.609-6.487-10.879-6.487-10.879s-0.179-0.366,0.016-0.589 c0.221-0.25,0.822-0.218,0.822-0.218L14.909,19c0,0,0.376,0.071,0.646,0.261c0.223,0.156,0.347,0.454,0.347,0.454 s0.671,2.216,1.526,3.629c1.67,2.758,2.447,2.828,3.014,2.531C21.27,25.445,21,22.513,21,22.513s0.037-1.259-0.395-1.82 c-0.333-0.434-0.97-0.665-1.248-0.701c-0.225-0.029,0.151-0.423,0.63-0.648C20.627,19.059,21.498,18.986,23,19 c1.169,0.011,1.506,0.081,1.962,0.186C26.341,19.504,26,20.343,26,23.289c0,0.944-0.13,2.271,0.582,2.711 c0.307,0.19,1.359,0.422,3.231-2.618c0.889-1.442,1.596-3.834,1.596-3.834s0.146-0.263,0.373-0.393 c0.232-0.133,0.225-0.13,0.543-0.13S35.832,19,36.532,19c0.699,0,1.355-0.008,1.468,0.402c0.162,0.589-0.516,2.607-2.234,4.797 C32.943,27.793,32.63,27.457,34.973,29.535z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+              <span class="contacts__label">VK</span>
+            </a>
+
+            <a
+              href="https://t.me/zena_milaya"
+              target="_blank"
+              class="contacts__link contacts__link--telegram"
+            >
+              <div class="contacts__icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 50 50"
+                  width="24"
+                  height="24"
+                >
+                  <path
+                    d="M25,2c12.703,0,23,10.297,23,23S37.703,48,25,48S2,37.703,2,25S12.297,2,25,2z M32.934,34.375 c0.423-1.298,2.405-14.234,2.65-16.783c0.074-0.772-0.17-1.285-0.648-1.514c-0.578-0.278-1.434-0.139-2.427,0.219 c-1.362,0.491-18.774,7.884-19.78,8.312c-0.954,0.405-1.856,0.847-1.856,1.487c0,0.45,0.267,0.703,1.003,0.966 c0.766,0.273,2.695,0.858,3.834,1.172c1.097,0.303,2.346,0.04,3.046-0.395c0.742-0.461,9.305-6.191,9.92-6.693 c0.614-0.502,1.104,0.141,0.602,0.644c-0.502,0.502-6.38,6.207-7.155,6.997c-0.941,0.959-0.273,1.953,0.358,2.351 c0.721,0.454,5.906,3.932,6.687,4.49c0.781,0.558,1.573,0.811,2.298,0.811C32.191,36.439,32.573,35.484,32.934,34.375z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+              <span class="contacts__label">Telegram</span>
+            </a>
+
+            <a
+              href="https://wa.me/79999218065"
+              target="_blank"
+              class="contacts__link contacts__link--whatsapp"
+            >
+              <div class="contacts__icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 50 50"
+                  width="24"
+                  height="24"
+                >
+                  <path
+                    d="M25,2C12.318,2,2,12.318,2,25c0,3.96,1.023,7.854,2.963,11.29L2.037,46.73c-0.096,0.343-0.003,0.711,0.245,0.966 C2.473,47.893,2.733,48,3,48c0.08,0,0.161-0.01,0.240-0.029l10.896-2.699C17.463,47.058,21.21,48,25,48c12.682,0,23-10.318,23-23 S37.682,2,25,2z M36.57,33.116c-0.492,1.362-2.852,2.605-3.986,2.772c-1.018,0.149-2.306,0.213-3.72-0.231 c-0.857-0.27-1.957-0.628-3.366-1.229c-5.923-2.526-9.791-8.415-10.087-8.804C15.116,25.235,13,22.463,13,19.594 s1.525-4.28,2.067-4.864c0.542-0.584,1.181-0.73,1.575-0.73s0.787,0.005,1.132,0.021c0.363,0.018,0.85-0.137,1.329,1.001 c0.492,1.168,1.673,4.037,1.819,4.33c0.148,0.292,0.246,0.633,0.05,1.022c-0.196,0.389-0.294,0.632-0.59,0.973 s-0.62,0.76-0.886,1.022c-0.296,0.291-0.603,0.606-0.259,1.19c0.344,0.584,1.529,2.493,3.285,4.039 c2.255,1.986,4.158,2.602,4.748,2.894c0.59,0.292,0.935,0.243,1.279-0.146c0.344-0.39,1.476-1.703,1.869-2.286 s0.787-0.487,1.329-0.292c0.542,0.194,3.445,1.604,4.035,1.896c0.590,0.292,0.984,0.438,1.132,0.681 C37.062,30.587,37.062,31.755,36.57,33.116z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+              <span class="contacts__label">WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scripts -->
+
+    <script src="script.js"></script>
+  </body>
+</html>
