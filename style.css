@@ -713,6 +713,7 @@
 
     /* Мобильное меню */
     .mobile-menu {
+        display: block;
         position: fixed;
         top: 0;
         left: 0;
@@ -723,7 +724,7 @@
         padding: 0;
         margin: 0;
         box-sizing: border-box;
-        z-index: 999;
+        z-index: 9999;
         opacity: 0;
         visibility: hidden;
         transition: opacity 0.3s ease, visibility 0.3s ease;
@@ -840,10 +841,6 @@
         }
 
         .burger-menu {
-            display: block;
-        }
-
-        .mobile-menu {
             display: block;
         }
 
@@ -1404,24 +1401,5 @@
     .contacts__label {
         font-size: 16px;
         text-align: left;
-    }
-
-    /* Принудительное отображение бургерного меню на мобильных */
-    @media (max-width: 425px) {
-        .mobile-menu {
-            display: block !important;
-        }
-    }
-
-    @media (max-width: 375px) {
-        .mobile-menu {
-            display: block !important;
-        }
-    }
-
-    @media (max-width: 320px) {
-        .mobile-menu {
-            display: block !important;
-        }
     }
 }
