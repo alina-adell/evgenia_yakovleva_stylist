@@ -4,19 +4,35 @@ document.addEventListener("DOMContentLoaded", function () {
   const mobileMenu = document.querySelector(".mobile-menu");
   const mobileLinks = document.querySelectorAll(".mobile-menu__link");
 
-  burgerBtn?.addEventListener("click", function () {
-    this.classList.toggle("active");
-    mobileMenu.classList.toggle("active");
-    document.body.classList.toggle("no-scroll");
-  });
+  console.log("Burger button:", burgerBtn);
+  console.log("Mobile menu:", mobileMenu);
+  console.log("Mobile links:", mobileLinks.length);
 
-  mobileLinks.forEach((link) => {
-    link.addEventListener("click", function () {
-      burgerBtn.classList.remove("active");
-      mobileMenu.classList.remove("active");
-      document.body.classList.remove("no-scroll");
+  if (burgerBtn && mobileMenu) {
+    burgerBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      console.log("Burger clicked!");
+      
+      this.classList.toggle("active");
+      mobileMenu.classList.toggle("active");
+      document.body.classList.toggle("no-scroll");
+      
+      console.log("Burger active:", this.classList.contains("active"));
+      console.log("Menu active:", mobileMenu.classList.contains("active"));
     });
-  });
+
+    mobileLinks.forEach((link) => {
+      link.addEventListener("click", function () {
+        console.log("Mobile link clicked!");
+        
+        burgerBtn.classList.remove("active");
+        mobileMenu.classList.remove("active");
+        document.body.classList.remove("no-scroll");
+      });
+    });
+  } else {
+    console.error("Burger menu elements not found!");
+  }
 });
 
 // Инициализация Slick карусели

@@ -713,7 +713,6 @@
 
     /* Мобильное меню */
     .mobile-menu {
-        display: none;
         position: fixed;
         top: 0;
         left: 0;
@@ -728,12 +727,13 @@
         opacity: 0;
         visibility: hidden;
         transition: opacity 0.3s ease, visibility 0.3s ease;
+        pointer-events: none;
     }
 
     .mobile-menu.active {
-        display: block;
         opacity: 1;
         visibility: visible;
+        pointer-events: all;
     }
 
     .mobile-nav {
@@ -1404,5 +1404,24 @@
     .contacts__label {
         font-size: 16px;
         text-align: left;
+    }
+
+    /* Принудительное отображение бургерного меню на мобильных */
+    @media (max-width: 425px) {
+        .mobile-menu {
+            display: block !important;
+        }
+    }
+
+    @media (max-width: 375px) {
+        .mobile-menu {
+            display: block !important;
+        }
+    }
+
+    @media (max-width: 320px) {
+        .mobile-menu {
+            display: block !important;
+        }
     }
 }
