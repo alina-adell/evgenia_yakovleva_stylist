@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Инициализация бургер-меню
   const burgerBtn = document.querySelector(".burger-btn");
   const mobileMenu = document.querySelector(".mobile-menu");
-  const mobileLinks = document.querySelectorAll(".mobile-nav a");
+  const mobileLinks = document.querySelectorAll(".mobile-menu__link");
 
   burgerBtn?.addEventListener("click", function () {
     this.classList.toggle("active");
