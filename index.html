@@ -7,7 +7,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- TT Moons шрифт - добавим через CSS @font-face или альтернативный шрифт -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link
@@ -20,6 +25,7 @@
       type="text/css"
       href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
     />
+    <link rel="stylesheet" href="mixins.css" />
     <link rel="stylesheet" href="style.css" />
     <script
       src="https://code.jquery.com/jquery-3.6.1.min.js"
@@ -39,34 +45,16 @@
           <img src="images/logo.jpeg" alt="Логотип Евгения Яковлева" />
         </div>
 
-        <div class="burger-menu">
-          <button class="burger-btn" aria-label="Открыть меню">
-            <span class="burger-line"></span>
-            <span class="burger-line"></span>
-            <span class="burger-line"></span>
-          </button>
-        </div>
-
         <div class="nav-bar">
-          <a href="#about">About Me</a>
-          <span class="divider">|</span>
-          <a href="#price">Price</a>
-          <span class="divider">|</span>
-          <a href="#works">My Works</a>
-          <span class="divider">|</span>
-          <a href="#contacts">Contacts</a>
-          <span class="divider">|</span>
-        </div>
-
-        <!-- Мобильное меню -->
-        <div class="mobile-menu">
-          <nav class="mobile-nav">
-            <a href="#about" class="mobile-menu__link">About Me</a>
-            <a href="#contacts" class="mobile-menu__link">Contacts</a>
-            <a href="#works" class="mobile-menu__link">My Works</a>
-            <a href="#price" class="mobile-menu__link">Price</a>
-            <a href="#reviews" class="mobile-menu__link">Reviews</a>
-          </nav>
+          <a href="#about" class="nav-item nav-keep">Обо мне</a>
+          <span class="divider nav-keep">|</span>
+          <a href="#works" class="nav-item nav-keep">Мои работы</a>
+          <span class="divider nav-keep">|</span>
+          <a href="#price" class="nav-item nav-hide">Прайс</a>
+          <span class="divider nav-hide">|</span>
+          <a href="#reviews" class="nav-item nav-hide">Отзывы</a>
+          <span class="divider nav-hide">|</span>
+          <a href="#contacts" class="nav-item nav-keep">Контакты</a>
         </div>
         <div class="header__phone">
           <a href="tel:+79999218065" class="header__phone-link">
@@ -92,7 +80,7 @@
       <div class="container main">
         <div class="main__info">
           <div class="main__title">Евгения Яковлева</div>
-          <div class="main__text">парикмахер-стилист</div>
+          <div class="main__text">[ парикмахер-стилист ]</div>
           <div class="main__action">
             <button
               class="btn main__btn"
@@ -111,14 +99,14 @@
 
     <section class="about" id="about">
       <div class="about__container">
-        <h2 class="section-title section-title--about">About Me</h2>
+        <h2 class="section-title section-title--about">Обо мне</h2>
         <div class="about__subtitle">
           Парикмахер-стилист, колорист с более чем 15-летним опытом работы
         </div>
         <div class="about__content">
           <div class="about__text about__text--left">
-            Здравствуй, искатель того самого « своего парикмахера» Меня зовут
-            Евгения Яковлева, я
+            Здравствуй, искатель того самого «своего парикмахера» Меня зовут
+            Евгения, я
             <span class="about__highlight">парикмахер-колорист</span> из
             Москвы.<br /><br />
             Я не просто работаю с волосами, я
@@ -137,7 +125,7 @@
             Моя философия проста: я
             <span class="about__highlight"
               >работаю на себя и для своего клиента</span
-            >. Мои навыки — это результат
+            >. Мои навыки- это результат
             <span class="about__highlight"
               >постоянного обучения и многолетнего опыта</span
             >.<br /><br />
@@ -151,7 +139,7 @@
     <section class="work" id="works">
       <div class="work__container">
         <div class="work__frame">
-          <h2 class="section-title section-title--work">My Works</h2>
+          <h2 class="section-title section-title--work">Мои работы</h2>
           <div class="work__slider">
             <div class="work__slide">
               <img
@@ -181,16 +169,6 @@
                 loading="lazy"
                 width="800"
                 height="600"
-              />
-            </div>
-            <div class="work__slide">
-              <img
-                src="images/3.jpg"
-                alt="Wedding"
-                class="work__img"
-                decoding="async"
-                width="400"
-                height="300"
               />
             </div>
             <div class="work__slide">
@@ -227,12 +205,39 @@
         </div>
       </div>
     </section>
+
+    <!-- Новая секция услуг для мобильных устройств -->
+    <section class="services-mobile" id="services-mobile">
+      <div class="container">
+        <h2 class="services-mobile__title">Услуги</h2>
+        <div class="services-mobile__content">
+          <div class="services-mobile__image">
+            <img src="images/price.jpg" alt="Услуги парикмахера" />
+          </div>
+          <div class="services-mobile__text-block">
+            <div class="services-mobile__info">
+              <p class="services-mobile__subtitle">
+                Я предлагаю клиентам целый ряд услуг, таких как:
+              </p>
+              <div class="services-mobile__services">
+                <div class="service-item">— стрижки</div>
+                <div class="service-item">— окрашивание любой сложности</div>
+                <div class="service-item">— уход</div>
+                <div class="service-item">— поддержание здоровья волос</div>
+              </div>
+            </div>
+            <div class="services-mobile__action">
+              <a href="#price" class="services-mobile__btn">ПОСМОТРЕТЬ ПРАЙС</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="price" id="price">
       <div class="container">
         <div class="design">
-          <h2 class="section-title section-title--price">
-            Прайс на наши услуги
-          </h2>
+          <h2 class="section-title section-title--price">Прайс на услуги</h2>
           <div class="price__info_all">
             <div class="price__item">
               <div class="list__price_info">Кератиновое выпрямление волос</div>
@@ -356,7 +361,7 @@
       <div class="container">
         <div class="reviews-header">
           <h2 class="section-title section-title--reviews">
-            What our clients say ...
+            Что говорят мои клиенты ...
           </h2>
         </div>
 
@@ -403,12 +408,9 @@
     <section class="contacts" id="contacts">
       <div class="container">
         <div class="contacts-header">
-          <h2 class="section-title section-title--contacts">Contacts</h2>
+          <h2 class="section-title section-title--contacts">Связь со мной</h2>
         </div>
         <div class="contacts__content">
-          <div class="contacts__text">
-            Свяжитесь со мной для записи или получения консультации
-          </div>
           <div class="contacts__social">
             <a
               href="https://vk.com/zena1991"
@@ -471,6 +473,27 @@
                 </svg>
               </div>
               <span class="contacts__label">WhatsApp</span>
+            </a>
+
+            <a
+              href="tel:+79999218065"
+              class="contacts__link contacts__link--phone"
+            >
+              <div class="contacts__icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                  fill="white"
+                >
+                  <path
+                    d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38L15.41 15.18C15.68 14.91 16.08 14.82 16.43 14.93C17.55 15.3 18.75 15.5 20 15.5C20.55 15.5 21 15.95 21 16.5V20C21 20.55 20.55 21 20 21C10.61 21 3 13.39 3 4C3 3.45 3.45 3 4 3H7.5C8.05 3 8.5 3.45 8.5 4C8.5 5.25 8.7 6.45 9.07 7.57C9.18 7.92 9.09 8.32 8.82 8.59L6.62 10.79Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+              <span class="contacts__label">Call</span>
             </a>
           </div>
         </div>

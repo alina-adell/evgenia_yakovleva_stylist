@@ -1,0 +1,153 @@
+/* CSS Mixins для проекта Евгения Яковлева */
+
+/* Миксины для цветов и теней */
+:root {
+    /* Основная цветовая палитра */
+    --purple-primary: #a259ff;
+    --purple-light: #d1aaff;
+    --purple-glow: #bf27b9;
+    --text-main: #e3e3c7;
+    --text-muted: #bdbdbd;
+    --text-white: #ffffff;
+    --bg-dark: #000000;
+    --bg-card: rgba(30, 30, 30, 0.35);
+    --border-light: rgba(255, 255, 255, 0.2);
+
+    /* Тени и эффекты */
+    --shadow-purple: 0 0 8px var(--purple-light), 0 0 16px var(--purple-primary);
+    --shadow-purple-strong: 0 0 12px var(--purple-light), 0 0 24px var(--purple-primary);
+    --shadow-pink: 0 0 8px var(--purple-glow), 0 0 18px var(--purple-glow);
+    --shadow-card: 0 2px 16px rgba(0, 0, 0, 0.08);
+
+    /* Переходы */
+    --transition-base: all 0.3s ease;
+    --transition-fast: all 0.2s ease;
+
+    /* Шрифты */
+    --font-heading: "Oswald", sans-serif;
+    --font-body: "Roboto", sans-serif;
+}
+
+/* Миксин для основного текста с фиолетовым свечением */
+.text-glow-purple {
+    color: var(--text-main);
+    text-shadow: var(--shadow-purple);
+}
+
+/* Миксин для заголовков с усиленным свечением */
+.heading-glow {
+    color: var(--text-main);
+    text-shadow: var(--shadow-purple-strong);
+    font-family: var(--font-heading);
+    font-weight: 300;
+    letter-spacing: 0.04em;
+}
+
+/* Миксин для кнопок с адаптивным размером */
+.btn-purple {
+    background: rgba(18, 18, 23, 0.9);
+    border: 1px solid var(--purple-light);
+    border-radius: 8px;
+    color: var(--text-white);
+    font-family: var(--font-heading);
+    font-size: clamp(12px, 4vw, 20px);
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: clamp(12px, 3vw, 16px) clamp(24px, 6vw, 40px);
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    transition: var(--transition-base);
+    box-shadow: 0 0 10px var(--purple-light), 0 0 20px rgba(255, 0, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-purple:hover {
+    background: rgba(255, 0, 255, 0.15);
+    box-shadow: 0 0 15px var(--purple-light), 0 0 30px rgba(255, 0, 255, 0.4);
+    transform: scale(1.02);
+    border-color: var(--purple-light);
+}
+
+/* Миксин для навигации */
+.nav-item-style {
+    color: var(--text-main);
+    text-shadow: var(--shadow-purple);
+    transition: var(--transition-fast);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.nav-item-style:hover {
+    color: var(--purple-primary);
+    text-shadow: var(--shadow-purple-strong);
+}
+
+/* Миксин для карточек */
+.card-style {
+    background: var(--bg-card);
+    border-radius: 24px;
+    padding: 12px 32px;
+    box-shadow: var(--shadow-card);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-light);
+}
+
+/* Миксин для заголовков разделов с адаптивным размером */
+.section-title-base {
+    font-size: clamp(28px, 6vw, 45px);
+    font-family: var(--font-heading);
+    margin: 0 0 clamp(30px, 5vw, 50px) 0;
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: 0.04em;
+    position: relative;
+}
+
+.section-title-base::before {
+    content: '';
+    position: absolute;
+    bottom: clamp(-6px, -1.5vw, -10px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: clamp(50px, 10vw, 80px);
+    height: clamp(2px, 0.5vw, 3px);
+    border-radius: 2px;
+    background: linear-gradient(90deg, transparent 0%, var(--purple-primary) 50%, transparent 100%);
+    box-shadow: 0 0 10px rgba(162, 89, 255, 0.4);
+}
+
+/* Вспомогательные классы */
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.visible {
+    display: block !important;
+}
+
+/* Миксин для плавного появления */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.active {
+    opacity: 1;
+    transform: translateY(0);
+}
